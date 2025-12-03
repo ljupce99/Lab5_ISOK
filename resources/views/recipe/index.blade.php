@@ -18,6 +18,8 @@
             <th>Title</th>
             <th>Description</th>
             <th>Ingredients</th>
+            <th>Category</th>
+
             <th>Actions</th>
         </tr>
         </thead>
@@ -27,6 +29,8 @@
                 <td>{{ $recipe->title }}</td>
                 <td>{{ $recipe->description }}</td>
                 <td>{{ $recipe->ingredients }}</td>
+                <th>{{ $recipe->category_recipes->name }}</th>
+
                 <td>
                     <a href="{{ route('recipe.show', $recipe->id) }}">View</a>
 

@@ -2,15 +2,13 @@
 
 @section('content')
     <h1>{{ $categoryRecipe->name }}'s Details</h1>
-
-
-
-    <h2>Recipes</h2>
+    <h3>Recipes</h3>
     <table border="1">
         <thead>
         <tr>
             <th>Title</th>
-
+            <th>Description</th>
+            <th>Ingredients</th>
         </tr>
         </thead>
         <tbody>
@@ -21,6 +19,8 @@
                         {{ $recipe->title }}
                     </a>
                 </td>
+                <td>{{ $recipe->description }}</td>
+                <td>{{ $recipe->ingredients }}</td>
 
             </tr>
         @endforeach

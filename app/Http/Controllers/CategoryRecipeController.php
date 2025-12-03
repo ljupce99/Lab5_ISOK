@@ -54,12 +54,9 @@ class CategoryRecipeController extends Controller
      */
     public function show(CategoryRecipe $categoryRecipe): View|Factory|Application
     {
-        $categoryRecipe->loadMissing('recipes');
-
-        return view('categoryRecipe.show', [
-            'categoryRecipe' => $categoryRecipe,
-            'recipes' => $categoryRecipe->recipes
-        ]);
+        $categoryRecipe->loadMissing('recipe');
+        $recipes=Recipe::where('category_recipes_id',$categoryRecipe->id)->get();
+        return view('categoryRecipe.show', compact('categoryRecipe','recipes'));
     }
 
     /**

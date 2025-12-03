@@ -6,9 +6,9 @@
 
 <div>
     <strong>Category Recipe:</strong>
-{{--    <a href="{{ route('categoryRecipe.show', $categoryRecipe->id) }}">--}}
-{{--        {{ $categoryRecipe->name }}--}}
-{{--    </a>--}}
+    <a href="{{ route('categoryRecipe.show', $recipe->category_recipes->id) }}">
+        {{ $recipe->category_recipes->name }}
+    </a>
 </div>
 
 <div>
